@@ -111,8 +111,20 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
 export function useTheme() {
   const context = useContext(ThemeContext);
+  // Return safe defaults if used outside provider (e.g. global-error boundary)
   if (context === undefined) {
-    throw new Error('useTheme must be used within ThemeProvider');
+    return {
+      theme: 'dark' as Theme,
+      setTheme: () => {},
+      accentColor: 'blue' as AccentColor,
+      setAccentColor: () => {},
+      sidebarStyle: 'expanded' as SidebarStyle,
+      setSidebarStyle: () => {},
+      glassIntensity: 'medium' as GlassIntensity,
+      setGlassIntensity: () => {},
+      animations: 'full' as Animations,
+      setAnimations: () => {},
+    };
   }
   return context;
 }
