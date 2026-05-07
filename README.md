@@ -1,263 +1,475 @@
-<div align="center">
+# SARVYA — AI-Powered Personalized Learning Ecosystem
 
-# 🚀 Sarvya Career OS
+SARVYA is a next-generation AI-powered personalized learning ecosystem designed to adapt to each learner’s pace, style, environment, engagement, and accessibility needs in real time.
 
-**The all-in-one engineering career platform for Indian students**
+Built for the theme:
 
-[![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue?logo=typescript)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8?logo=tailwindcss)](https://tailwindcss.com/)
-[![Supabase](https://img.shields.io/badge/Supabase-Database-3ecf8e?logo=supabase)](https://supabase.com/)
-[![Clerk](https://img.shields.io/badge/Clerk-Auth-6c47ff?logo=clerk)](https://clerk.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+AI for Personalized Learning
 
-[Live Demo](#) · [Report Bug](https://github.com/Sreejith-nair511/Sarvya-carrer/issues) · [Request Feature](https://github.com/Sreejith-nair511/Sarvya-carrer/issues)
+SARVYA combines:
+- Adaptive AI learning
+- Gamified education
+- Real-time IoT integration
+- Accessibility-first learning
+- Digital Twin analytics
+- Multilingual interaction
+- Context-aware personalization
 
-</div>
-
----
-
-## 📖 About
-
-**Sarvya Career OS** is a comprehensive career platform built specifically for Indian engineering students aiming to land roles at top tech companies. It combines expert-led courses, AI-powered guidance, adaptive quizzes, learning analytics, and an ATS-optimized resume builder — all in one place.
-
-> Built with the modern web stack: Next.js 16, TypeScript, Supabase, Clerk, and Groq AI.
+Unlike traditional learning platforms that only react to answers, SARVYA also understands the learner’s behavior and real-world environment using hardware sensors and AI-driven adaptation.
 
 ---
 
-## ✨ Features
+# Problem Statement
 
-### 🎓 Learning Platform
-- **200+ Expert Courses** — Industry-aligned content curated by engineers from top tech companies
-- **Structured Learning Paths** — Guided roadmaps from beginner to job-ready
-- **Course Progress Tracking** — Resume where you left off, track completion per lesson
-- **My Courses Dashboard** — Manage all enrolled courses in one view
+Most learning systems assume all students learn the same way.
 
-### 🤖 AI-Powered Tools
-- **AI Career Assistant** — Streaming chat interface powered by Groq (Llama 3.3 70B), acting as your personal engineering career coach
-- **Adaptive Quiz Engine** — AI-generated quizzes that adjust difficulty based on your performance
-- **AI Resume Analyzer** — Get structured ATS feedback and keyword suggestions on your resume
+Current platforms:
+- Focus only on correctness
+- Ignore environment and engagement
+- Lack accessibility support
+- Provide static learning experiences
+- Do not deeply adapt to learners
 
-### 📊 Analytics & Insights
-- **Learning Analytics** — Visual dashboards showing streaks, skill progress, and time spent
-- **Learning Profile** — Personalized profile tracking your strengths and growth areas
-- **Achievement System** — Badges and milestones to keep you motivated
+This becomes a much larger issue in rural and semi-urban areas where students face:
+- Poor lighting conditions
+- Frequent distractions
+- Language barriers
+- Limited personalized guidance
+- Accessibility challenges
 
-### 📝 Resume Builder
-- **ATS-Optimized Templates** — Professionally designed resume layouts
-- **Real-Time Preview** — See changes instantly as you type
-- **AI Feedback Integration** — One-click AI analysis with actionable improvement suggestions
-- **Export Ready** — Download your resume in a clean, recruiter-friendly format
+Traditional systems are blind to these conditions.
 
-### 🎨 Premium UI/UX
-- **5 Accent Color Themes** — Classic Blue, Royal Indigo, Ethereal Violet, Deep Rose, Vibrant Emerald
-- **Dark / Light Mode** — Full theme support with smooth transitions
-- **Glassmorphism Effects** — Adjustable intensity (Low / Medium / High)
-- **Motion Controls** — Full, Subtle, or No animations — your choice
-- **Fully Responsive** — Optimized for mobile and desktop
-
-### 🔐 Authentication & Security
-- **Clerk Auth** — Secure sign-in / sign-up with social login support
-- **Protected Routes** — Middleware-based route protection
-- **Role-based Access** — Dashboard and course content gated behind auth
+SARVYA is not.
 
 ---
 
-## 🛠️ Tech Stack
+# Our Solution
 
-| Layer | Technology |
-|---|---|
-| **Framework** | [Next.js 16](https://nextjs.org/) (App Router) |
-| **Language** | [TypeScript 5.7](https://www.typescriptlang.org/) |
-| **Styling** | [Tailwind CSS 3.4](https://tailwindcss.com/) |
-| **UI Components** | [shadcn/ui](https://ui.shadcn.com/) (Radix UI primitives) |
-| **Database** | [Supabase](https://supabase.com/) (PostgreSQL) |
-| **Authentication** | [Clerk](https://clerk.com/) |
-| **AI / LLM** | [Groq SDK](https://console.groq.com/) — Llama 3.3 70B |
-| **Charts** | [Recharts](https://recharts.org/) |
-| **Icons** | [Lucide React](https://lucide.dev/) |
-| **Forms** | [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/) |
-| **Package Manager** | [pnpm](https://pnpm.io/) |
+SARVYA is a fully connected AI-powered ecosystem where:
 
----
+- The app teaches
+- The game engages
+- The hardware senses
+- The AI adapts
 
-## 📁 Project Structure
+The platform continuously analyzes:
+- Performance
+- Behavior
+- Engagement
+- Accessibility requirements
+- Environmental conditions
 
-```
-├── app/
-│   ├── page.tsx                  # Landing page
-│   ├── dashboard/                # Main user dashboard
-│   ├── courses/                  # Course listing & detail pages
-│   │   └── [id]/lesson/[lessonId]/ # Individual lesson viewer
-│   ├── learning/
-│   │   ├── path/                 # Learning path page
-│   │   ├── quiz/                 # Adaptive quiz
-│   │   └── analytics/            # Learning analytics
-│   ├── ai-assistant/             # AI career chat
-│   ├── resume-builder/           # Resume builder tool
-│   ├── roadmaps/                 # Career roadmaps
-│   ├── hackathons/               # Hackathon listings
-│   ├── jobs/                     # Job board
-│   ├── settings/                 # User settings & appearance
-│   └── api/                      # API routes (chat, quiz, analytics, etc.)
-├── components/
-│   ├── dashboard/                # Dashboard-specific components
-│   ├── landing/                  # Landing page sections
-│   └── ui/                       # shadcn/ui component library (50+ components)
-├── lib/
-│   ├── actions/                  # Server actions
-│   ├── supabase.ts               # Supabase client
-│   ├── supabase-server.ts        # Supabase server client
-│   └── utils.ts                  # Utility functions
-├── hooks/                        # Custom React hooks
-├── scripts/                      # Database seeding scripts
-└── supabase_migration_*.sql      # Database migration files
-```
+and dynamically personalizes the learning experience in real time.
 
 ---
 
-## 🚀 Getting Started
+# Ecosystem Architecture
 
-### Prerequisites
+SARVYA is built as a 3-layer intelligent ecosystem.
 
-- **Node.js** — Latest LTS version
-- **pnpm** — `npm install -g pnpm`
-- **Supabase** account — [supabase.com](https://supabase.com)
-- **Clerk** account — [clerk.com](https://clerk.com)
-- **Groq** API key — [console.groq.com](https://console.groq.com)
+## Layer 1 — Interaction Layer
 
-### 1. Clone the repository
+This is where users interact with the platform.
 
-```bash
-git clone https://github.com/Sreejith-nair511/Sarvya-carrer.git
-cd Sarvya-carrer
-```
+### Components
+- Mobile Learning App
+- SARVYA QUEST (Gamified RPG Learning App)
+- SARVYA Control Center (Web Platform)
+- CLI Tool
 
-### 2. Install dependencies
-
-```bash
-pnpm install
-```
-
-### 3. Set up environment variables
-
-Copy the example env file and fill in your keys:
-
-```bash
-cp .env.example .env.local
-```
-
-```env
-# Supabase
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
-
-# Clerk
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
-CLERK_SECRET_KEY=your_clerk_secret_key
-NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
-NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
-NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/dashboard
-NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/dashboard
-
-# AI
-GROQ_API_KEY=your_groq_api_key
-
-# Optional
-YOUTUBE_API_KEY=your_youtube_api_key
-```
-
-### 4. Set up the database
-
-Run the SQL migrations in your Supabase SQL Editor in this order:
-
-```
-supabase_migration_courses.sql   → Creates the courses table
-supabase_migration_v2.sql        → Adds enrollments, progress, indexes
-supabase_migration_ai_learning.sql → AI learning features schema
-```
-
-### 5. Run the development server
-
-```bash
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-### 6. Seed initial data (optional)
-
-After signing in, visit:
-```
-http://localhost:3000/api/populate-courses
-```
+### Responsibilities
+- AI tutoring
+- Adaptive learning
+- Gamified education
+- Dashboard analytics
+- Accessibility interaction
+- Learning visualization
 
 ---
 
-## 🌐 Deployment
+## Layer 2 — Intelligence Layer
 
-The recommended deployment stack is **Vercel + Supabase + Clerk**.
+This is the AI brain of SARVYA.
 
-See [DEPLOYMENT.md](DEPLOYMENT.md) for the full step-by-step guide including:
-- Supabase project setup and migrations
-- Clerk configuration and redirect URLs
-- Vercel environment variable setup
-- Post-deployment data seeding
+### Components
+- Digital Twin Engine
+- Adaptive Learning Engine
+- AI Tutor
+- Prediction Engine
+- Explain-It-My-Way System
 
----
-
-## 📸 Screenshots
-
-| Landing Page | Dashboard | AI Assistant |
-|---|---|---|
-| ![Landing](https://via.placeholder.com/300x200?text=Landing+Page) | ![Dashboard](https://via.placeholder.com/300x200?text=Dashboard) | ![AI Chat](https://via.placeholder.com/300x200?text=AI+Assistant) |
-
-| Course View | Resume Builder | Learning Analytics |
-|---|---|---|
-| ![Courses](https://via.placeholder.com/300x200?text=Courses) | ![Resume](https://via.placeholder.com/300x200?text=Resume+Builder) | ![Analytics](https://via.placeholder.com/300x200?text=Analytics) |
+### Responsibilities
+- Track learning behavior
+- Predict weak understanding
+- Adapt difficulty dynamically
+- Personalize explanations
+- Generate AI feedback
+- Adjust pacing and learning style
 
 ---
 
-## 🗺️ Roadmap
+## Layer 3 — Sensing & Infrastructure Layer
 
-- [ ] Mobile app (React Native)
-- [ ] Live coding interview practice
-- [ ] Peer-to-peer mentorship matching
-- [ ] Company-specific interview prep tracks
-- [ ] Community forums and discussion boards
-- [ ] Offline course downloads
+This connects the real world to the learning system.
 
----
+### Components
+- ESP32 Rover
+- Light Sensor
+- Tilt Sensor
+- Shock Sensor
+- Microphone Module
+- MQTT Pipeline
 
-## 🤝 Contributing
-
-Contributions are welcome! Here's how to get started:
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/your-feature-name`
-3. Commit your changes: `git commit -m 'feat: add your feature'`
-4. Push to the branch: `git push origin feature/your-feature-name`
-5. Open a Pull Request
-
-Please follow [Conventional Commits](https://www.conventionalcommits.org/) for commit messages.
+### Responsibilities
+- Detect environmental conditions
+- Capture engagement signals
+- Monitor movement/distraction
+- Stream real-time sensor data
 
 ---
 
-## 📄 License
+# Core Components
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+# 1. SARVYA Control Center (Web Platform)
+
+The centralized web platform that synchronizes the entire ecosystem.
+
+## Features
+- Digital Twin dashboard
+- Interactive knowledge graph
+- Real-time hardware monitoring
+- AI tutor interface
+- Session replay system
+- APK access center
+- CareerOS integration
+- Accessibility transformer
+
+## Tech Stack
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- React Flow
+- Recharts
+- Zustand
 
 ---
 
-## 👨‍💻 Author
+# 2. Mobile Learning Application
 
-**Sreejith Nair**
-- GitHub: [@Sreejith-nair511](https://github.com/Sreejith-nair511)
+Adaptive AI learning application.
+
+## Features
+- Personalized learning paths
+- AI tutoring
+- Adaptive quizzes
+- Voice interaction
+- Accessibility-first UI
+- Multilingual support
+
+## Accessibility Features
+- Voice-first interaction
+- High contrast mode
+- Screen reader support
+- Large text mode
+- Simplified explanations
 
 ---
 
-<div align="center">
-  <p>Built with ❤️ for Indian engineering students</p>
-  <p>⭐ Star this repo if you find it helpful!</p>
-</div>
+# 3. SARVYA QUEST (Game Layer)
+
+A gamified RPG-style learning experience.
+
+## Features
+- Question-driven combat
+- Boss battles for mastery
+- AI-adaptive enemy behavior
+- Dynamic difficulty adjustment
+- Reinforced learning loop
+
+## Intelligent Learning Loop
+
+If a learner answers incorrectly:
+- The game enters learning mode
+- Generates explanations
+- Shows visual diagrams
+- Uses voice narration
+- Re-tests the concept
+
+This ensures learning is reinforced instead of guessed.
+
+---
+
+# 4. Hardware Intelligence Layer
+
+ESP32-based rover integrated with multiple sensors.
+
+## Sensors Used
+- Light Sensor
+- Tilt Sensor
+- Shock Sensor
+- Microphone Module
+- IR Sensor
+- Button Interaction Module
+
+## Purpose
+The rover captures:
+- Lighting conditions
+- Movement
+- Distraction
+- Interaction
+- Engagement
+- Environmental context
+
+---
+
+# Real-Time Architecture
+
+ESP32 → MQTT → Backend → Supabase → Dashboard/App/Game
+
+All platforms remain synchronized in real time.
+
+---
+
+# AI Digital Twin System
+
+At the core of SARVYA is the Digital Twin.
+
+The Digital Twin continuously tracks:
+- Accuracy
+- Response time
+- Weak topics
+- Learning pace
+- Engagement
+- Accessibility preferences
+- Sensor patterns
+- Learning behavior
+
+The AI dynamically adapts:
+- Difficulty
+- Explanation style
+- Learning speed
+- Content format
+- Gameplay behavior
+
+---
+
+# Accessibility-First Learning
+
+SARVYA is designed to support inclusive education.
+
+## Features
+- Voice-first interaction
+- Screen reader compatibility
+- High contrast mode
+- Large text mode
+- Simplified text generation
+- Audio learning support
+- Multilingual AI tutor
+
+---
+
+# One-Click Accessibility Transformer
+
+Convert any content into:
+- Audio
+- Simplified text
+- Visual explanation
+- Diagram-based learning
+
+---
+
+# Explain-It-My-Way Engine
+
+Learners can choose how concepts are explained:
+- Story mode
+- Step-by-step mode
+- Diagram mode
+- Example-based mode
+
+The AI dynamically generates explanations in the selected format.
+
+---
+
+# Cognitive Load Balancer
+
+Using:
+- Sensor data
+- Movement patterns
+- Learning performance
+
+SARVYA can:
+- Detect overload
+- Reduce complexity
+- Shorten sessions
+- Switch learning format
+- Increase engagement
+
+---
+
+# Hardware-Based Adaptation
+
+Examples:
+- Low light → switch to audio learning
+- High movement → reduce cognitive load
+- Distraction → trigger gamified interaction
+- Repeated struggle → simplify explanation
+
+---
+
+# Supported Learning Levels
+
+# FOUNDATION
+(Class 1–10)
+- Story-based learning
+- Voice guidance
+- Interactive visuals
+- Simplified navigation
+
+---
+
+# ADVANCED
+(Class 11–12 + Competitive Exams)
+- Timed tests
+- Exam-focused learning
+- Performance analytics
+- Chapter progression
+
+---
+
+# PROFESSIONAL
+(College / STEM / Courses)
+- Skill-based progression
+- Real-world problem solving
+- Career-oriented learning
+- Domain specialization
+
+---
+
+# CareerOS Integration
+
+SARVYA also includes a career development layer.
+
+## Features
+- Resume Builder
+- ATS Optimization
+- AI Resume Feedback
+- Learning Analytics
+- Career Guidance
+- Skill Tracking
+
+---
+
+# Knowledge Graph System
+
+Interactive AI-powered knowledge graph featuring:
+- Subject → Topic → Concept mapping
+- Dynamic dependencies
+- Weak topic identification
+- AI-generated recommendations
+- Animated node visualization
+
+---
+
+# Unique Features
+
+- AI Digital Twin
+- Context-aware learning
+- Real-time hardware adaptation
+- Accessibility-first design
+- Gamified reinforcement learning
+- Interactive knowledge graph
+- MQTT-powered ecosystem
+- Real-time synchronization
+- Multilingual AI tutoring
+
+---
+
+# Tech Stack
+
+# Frontend
+- Next.js
+- React Native / Flutter
+- Kotlin
+- Tailwind CSS
+- ShadCN UI
+
+---
+
+# Backend
+- FastAPI
+- WebSockets
+- MQTT
+- Supabase
+
+---
+
+# AI Stack
+- Gemini API
+- Groq API
+- AI Tutor Engine
+- Digital Twin Engine
+
+---
+
+# Hardware Stack
+- ESP32
+- Arduino
+- MQTT Communication
+- Sensor Modules
+
+---
+
+# Real-Time Example
+
+If:
+- Light levels are low
+- Movement increases
+- Noise/distraction rises
+- Learner struggles repeatedly
+
+SARVYA can:
+- Enable accessibility mode
+- Switch to voice learning
+- Simplify explanations
+- Reduce cognitive load
+- Change learning pace
+- Increase engagement-based interaction
+
+---
+
+# Goal
+
+To build an intelligent, adaptive, and inclusive learning ecosystem that improves:
+- Engagement
+- Accessibility
+- Personalization
+- Learning outcomes
+
+for students across different environments and abilities.
+
+---
+
+# Vision
+
+SARVYA is not just another edtech platform.
+
+It is a real-time AI ecosystem that understands the learner digitally, behaviorally, and environmentally — and adapts continuously to improve learning.
+
+---
+
+# Competition Theme
+
+AI for Personalized Learning
+
+Leveraging AI to create adaptive, intelligent, and customized learning experiences.
+
+---
+
+# Team
+
+Built for innovation, accessibility, personalization, and the future of education.
+
+# SARVYA
+
+The Future of Context-Aware Learning.
